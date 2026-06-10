@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 셔츠룸 성우이벤트 | 정보</title>
+    <meta name="description" content="마포 셔츠룸 성우이벤트의 운영 철학과 시스템을 소개합니다. 010-6279-0862로 문의하세요.">
+    <meta name="keywords" content="마포 셔츠룸, 성우이벤트, 마포 셔츠룸 정보, 마포 이벤트, 셔츠룸 예약, 마포구 셔츠룸">
+    <link rel="canonical" href="https://sf-t3-1779642675702-310.vercel.app/info">
+    <meta property="og:title" content="마포 셔츠룸 성우이벤트 | 정보">
+    <meta property="og:description" content="마포 셔츠룸 성우이벤트의 운영 철학과 시스템을 소개합니다. 전문가와 상담하세요.">
+    <meta property="og:url" content="https://sf-t3-1779642675702-310.vercel.app/info">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sf-t3-1779642675702-310.vercel.app/og-image.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+            line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #f5f5f5;
+            text-decoration: none;
+        }
+        .logo span {
+            color: #c9a96e;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 36px;
+        }
+        nav a {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            color: #c9a96e;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 1.5px;
+            background: #f5f5f5;
+            transition: 0.3s;
+        }
+        .nav-mobile {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.98);
+            backdrop-filter: blur(12px);
+            padding: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .nav-mobile ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .nav-mobile a {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav-mobile.active {
+                display: block;
+            }
+            .container {
+                padding: 0 16px;
+            }
+        }
+        .hero {
+            padding: 160px 0 80px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(201, 169, 110, 0.03) 0%, transparent 100%);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 200;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+            color: #f5f5f5;
+        }
+        .hero h1 span {
+            color: #c9a96e;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+        .section {
+            padding: 80px 0;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 200;
+            letter-spacing: 0.06em;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #f5f5f5;
+        }
+        .section-title span {
+            color: #c9a96e;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        .info-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+        .info-card:hover {
+            border-color: rgba(201, 169, 110, 0.3);
+        }
+        .info-card h3 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            margin-bottom: 20px;
+            color: #c9a96e;
+        }
+        .info-card p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .info-card ul li {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .info-card ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: #c9a96e;
+        }
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 60px 0;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 200;
+            color: #c9a96e;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: #a0a0a0;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .cta-section {
+            text-align: center;
+            padding: 80px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .cta-section h2 {
+            font-size: 2rem;
+            font-weight: 200;
+            letter-spacing: 0.06em;
+            margin-bottom: 16px;
+            color: #f5f5f5;
+        }
+        .cta-section p {
+            color: #a0a0a0;
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 14px 48px;
+            background: transparent;
+            border: 1px solid #c9a96e;
+            color: #c9a96e;
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+        .cta-button:hover {
+            background: #c9a96e;
+            color: #0a0a0a;
+        }
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+        footer p {
+            color: #666;
+            font-size: 0.8rem;
+            letter-spacing: 0.04em;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 0.95rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .stats-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .section {
+                padding: 50px 0;
+            }
+            .info-card {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">셔츠룸<span>성우</span></a>
+            <nav>
+                <ul>
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/info">정보</a></li>
+                    <li><a href="/service">서비스</a></li>
+                    <li><a href="/contact">문의</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" onclick="document.querySelector('.nav-mobile').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="/">홈</a></li>
+                <li><a href="/info">정보</a></li>
+                <li><a href="/service">서비스</a></li>
+                <li><a href="/contact">문의</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>마포 셔츠룸 <span>성우이벤트</span></h1>
+            <p>데이터 기반 분석과 정밀한 시스템 설계로 완성되는 프리미엄 이벤트 서비스의 모든 것</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">운영 <span>철학</span></h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>데이터 기반 접근</h3>
+                    <p>마포 셔츠룸 성우이벤트는 3,200건 이상의 고객 데이터와 1,500회의 현장 운영 기록을 기반으로 정밀한 이벤트 설계를 수행합니다. 모든 결정은 정량적 지표와 패턴 분석에 근거합니다.</p>
+                    <ul>
+                        <li>고객 선호도 데이터베이스 구축</li>
+                        <li>시간대별 효율성 분석 시스템</li>
+                        <li>맞춤형 매칭 알고리즘 적용</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>시스템 설계 원칙</h3>
+                    <p>마포 셔츠룸의 운영 시스템은 5년간의 현장 경험과 지속적인 피드백 루프를 통해 최적화되었습니다. 각 프로세스는 검증된 프로토콜에 따라 실행됩니다.</p>
+                    <ul>
+                        <li>단계별 품질 관리 프로세스</li>
+                        <li>실시간 모니터링 및 대응 체계</li>
+                        <li>사후 분석을 통한 지속 개선</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-number">3,200+</div>
+                    <div class="stat-label">분석된 고객 데이터</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,500+</div>
+                    <div class="stat-label">현장 운영 기록</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98.7%</div>
+                    <div class="stat-label">고객 만족도</div>
+                </div>
+            </div>
+
+            <h2 class="section-title">마포 셔츠룸 <span>서비스 체계</span></h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>프리미엄 이벤트 설계</h3>
+                    <p>마포 셔츠룸 성우이벤트는 고객의 니즈를 정밀하게 분석하여 최적의 이벤트를 설계합니다. 데이터 분석 결과를 바탕으로 한 맞춤형 구성이 핵심 경쟁력입니다.</p>
+                    <ul>
+                        <li>개인화된 이벤트 컨셉 도출</li>
+                        <li>시간 및 자원 최적화 배치</li>
+                        <li>사전 시뮬레이션을 통한 리스크 관리</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>전문가 네트워크</h3>
+                    <p>마포 셔츠룸은 검증된 전문가 네트워크를 보유하고 있습니다. 각 분야의 전문가들이 체계적인 협업을 통해 일관된 품질을 유지합니다.</p>
+                    <ul>
+                        <li>경력 5년 이상의 전문 인력</li>
+                        <li>정기적인 교육 및 평가 시스템</li>
+                        <li>실시간 커뮤니케이션 채널 운영</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>마포 셔츠룸 <span>성우이벤트</span> 상담</h2>
+            <p>데이터 기반의 프리미엄 서비스를 경험하세요. 전문가가 맞춤형 솔루션을 제공합니다.</p>
+            <a href="tel:01062790862" class="cta-button">010-6279-0862</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 마포 셔츠룸 성우이벤트. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
